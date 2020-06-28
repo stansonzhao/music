@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-size: cover;
+  overflow: hidden;
+}
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  padding-top: 15vw;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.wrapper .imageArea {
+  width: 70vw;
+  height: 70vw;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 30px auto;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .imageArea.active {
+  animation: rot 20s linear infinite;
+}
+@keyframes rot {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+.wrapper .imageArea img {
+  width: 85%;
+  height: 85%;
+  border-radius: 50%;
+}
+.wrapper .songInfo {
+  height: 15vh;
+  margin-top: 6vw;
+  text-align: center;
+  color: #fff;
+}
+.wrapper .songInfo .name {
+  font-size: 24px;
+  margin-bottom: 3vw;
+  font-weight: normal;
+}
+.wrapper .songInfo div {
+  font-size: 14px;
+}
+.wrapper .progress {
+  display: flex;
+  height: 8vw;
+  text-align: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 8vw;
+}
+.wrapper .progress .curTime {
+  padding: 0 4vw;
+}
+.wrapper .progress .drag {
+  height: 8vw;
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  position: relative;
+}
+.wrapper .progress .drag .circle {
+  width: 2vw;
+  height: 2vw;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  z-index: 1;
+  left: -3vw;
+  background-clip: content-box;
+  border: 2vw solid rgba(255, 255, 255, 0);
+}
+.wrapper .progress .drag .frontBg {
+  position: absolute;
+  background-color: #fff;
+  width: 0%;
+  height: 1vw;
+  border-radius: 10px;
+}
+.wrapper .progress .drag .backBg {
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 1vw;
+  width: 100%;
+  border-radius: 10px;
+}
+.wrapper .progress .totalTime {
+  padding: 0 4vw;
+}
+.wrapper .ctrl {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 16vw;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.wrapper .ctrl li {
+  width: 20%;
+  list-style: none;
+}
+.wrapper .ctrl li:nth-child(1) {
+  background: url(../images/icon-like.png) no-repeat center / 30%;
+}
+.wrapper .ctrl li:nth-child(1).liking {
+  background: url(../images/icon-like-solid.png) no-repeat center / 30%;
+}
+.wrapper .ctrl li:nth-child(2) {
+  background: url(../images/icon-prev.png) no-repeat center / 30%;
+}
+.wrapper .ctrl li:nth-child(3) {
+  background: url(../images/icon-play.png) no-repeat center / 30%;
+}
+.wrapper .ctrl li:nth-child(3).playing {
+  background: url(../images/icon-pause.png) no-repeat center / 30%;
+}
+.wrapper .ctrl li:nth-child(4) {
+  background: url(../images/icon-next.png) no-repeat center / 30%;
+}
+.wrapper .ctrl li:nth-child(5) {
+  background: url(../images/icon-list.png) no-repeat center / 30%;
+}
+.wrapper .listArea {
+  position: absolute;
+  bottom: -81vh;
+  width: 100vw;
+  height: 80vh;
+  z-index: 10;
+  transition: all 0.2s linear;
+  overflow: auto;
+  background-image: linear-gradient(#050505, rgba(170, 170, 170, 0.99));
+}
+.wrapper .listArea.on {
+  bottom: 0vh;
+}
+.wrapper .listArea .song,
+.wrapper .listArea .list,
+.wrapper .listArea .close {
+  height: 12vw;
+  font-size: 16px;
+  line-height: 12vw;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.wrapper .listArea .content {
+  position: absolute;
+  width: 100vw;
+  overflow: auto;
+  top: 12vw;
+  bottom: 12vw;
+}
+.wrapper .listArea .list,
+.wrapper .listArea .close {
+  text-align: center;
+  position: absolute;
+  width: 100vw;
+}
+.wrapper .listArea .list {
+  top: 0;
+}
+.wrapper .listArea .close {
+  bottom: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.wrapper .listArea .song {
+  padding: 0 4vw;
+  box-sizing: border-box;
+}
+.wrapper .listArea .song.active {
+  color: #56b287;
+}
+
