@@ -148,7 +148,7 @@ eval("/* requires:\r\nzepto.min.js\r\n*/\r\n(function ($, root) {\r\n    'use st
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("let $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\r\nlet data;\r\n$.ajax({\r\n    url:'../mock/data.json',\r\n    type:'get',\r\n    async:false,\r\n    success(resp){\r\n        data = resp\r\n    }\r\n})\r\n\r\nmodule.exports = data;\n\n//# sourceURL=webpack:///./src/js/getData.js?");
+eval("let $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\r\nlet data;\r\n$.ajax({\r\n    url:'/music/mock/data.json',\r\n    type:'get',\r\n    async:false,\r\n    success(resp){\r\n        data = resp\r\n    }\r\n})\r\n\r\nmodule.exports = data;\n\n//# sourceURL=webpack:///./src/js/getData.js?");
 
 /***/ }),
 
