@@ -159,7 +159,7 @@ eval("let $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jqu
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ../css/index.less */ \"./src/css/index.less\")\r\n__webpack_require__(/*! ./bindEvent */ \"./src/js/bindEvent.js\")\r\n__webpack_require__(/*! ./time */ \"./src/js/time.js\")\r\n\r\n\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("__webpack_require__(/*! ../css/index.less */ \"./src/css/index.less\")\r\n__webpack_require__(/*! ./bindEvent */ \"./src/js/bindEvent.js\")\r\n__webpack_require__(/*! ./time */ \"./src/js/time.js\")\r\n\r\nvar mo=function(e){\r\n    e.preventDefault()\r\n };\r\n \r\n/***禁止滑动***/\r\nfunction stop(){\r\n    document.body.style.overflow='hidden';\r\n    document.addEventListener(\"touchmove\",mo,false);//禁止页面滑动\r\n}\r\nstop();\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ }),
 
