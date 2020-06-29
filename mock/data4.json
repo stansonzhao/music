@@ -1,0 +1,38 @@
+[
+    {
+        "image": "/music/source/song_1.jpg",
+        "audio": "/music/source/song_1.mp3",
+        "song": "丑八怪",
+        "album": "意外",
+        "singer": "薛之谦",
+        "duration": 253,
+        "isLike": true
+    },
+    {
+        "image": "/music/source/song_2.jpg",
+        "audio": "/music/source/song_2.mp3",
+        "song": "小半",
+        "album": "小梦大半",
+        "singer": "陈粒",
+        "duration": 297,
+        "isLike": false
+    },
+    {
+        "image": "/music/source/song_3.jpg",
+        "audio": "/music/source/song_3.mp3",
+        "song": "Shape of You",
+        "album": "÷",
+        "singer": "ed sheeran",
+        "duration": 235,
+        "isLike": false
+    },
+    {
+        "image": "/music/source/song_4.png",
+        "audio": "/music/source/song_4.mp3",
+        "song": "Mission ：Impossible Theme",
+        "album": "碟中谍4 电影原声带",
+        "singer": "Michael Giacchino",
+        "duration": 53,
+        "isLike": true
+    }
+]
